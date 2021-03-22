@@ -7,16 +7,11 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    useHistory
 } from "react-router-dom";
 import Button from "./components/Button";
 
 function App() {
     const divStyle = {display: "grid", textAlign: "center"};
-
-    let history = useHistory();
-
-    const handleClick = useCallback(() => history.push('/sample'), [history]);
 
     return (
         <Router>
@@ -38,7 +33,6 @@ function App() {
                     </div>
                 </Route>
             </Switch>
-
         </Router>
     );
 }
